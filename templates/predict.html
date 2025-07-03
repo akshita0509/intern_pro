@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+            background-color: #f0f0f0;
+        }
+        .result-container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            width: 500px;
+            margin: auto;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        h2 {
+            color: #333;
+        }
+        p {
+            font-size: 18px;
+            color: #444;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #1d8ceb;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .graphs {
+            margin-top: 40px;
+        }
+        .graphs img {
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+            display: block;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="result-container">
+        <h2>Prediction Result</h2>
+        <p>{{ prediction_text }}</p>
+        <a href="/">Go back to form</a>
+    </div>
+
+    <div class="graphs">
+        <h2 style="text-align:center;">Data Visualizations</h2>
+        <img src="{{ url_for('static', filename='Graph_outputs/Figure_1.png') }}" alt="Graph 1">
+<img src="{{ url_for('static', filename='Graph_outputs/Figure_2.png') }}" alt="Graph 2">
+<img src="{{ url_for('static', filename='Graph_outputs/Figure_3.png') }}" alt="Graph 3">
+<img src="{{ url_for('static', filename='Graph_outputs/Figure_4.png') }}" alt="Graph 4">
+<img src="{{ url_for('static', filename='Graph_outputs/Figure_5.png') }}" alt="Graph 5">
+<img src="{{ url_for('static', filename='Graph_outputs/Figure_6.png') }}" alt="Graph 6">
+<img src="{{ url_for('static', filename='Graph_outputs/Figure_7.png') }}" alt="Graph 7">
+
+    </div>
+</body>
+</html>
