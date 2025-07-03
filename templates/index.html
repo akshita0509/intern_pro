@@ -2,9 +2,62 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Flask App</title>
+    <title>Anemia Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 40px;
+            background-color: #f8f8f8;
+        }
+        form {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            width: 350px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        label, input {
+            display: block;
+            margin: 10px 0;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #1d8ceb;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to My Flask App</h1>
+    <h2>Anemia Prediction Form</h2>
+    <form action="/predict" method="post">
+        <label for="Gender">Gender (0 = Male, 1 = Female):</label>
+        <input type="text" name="Gender" required>
+
+        <label for="Hemoglobin">Hemoglobin:</label>
+        <input type="text" name="Hemoglobin" required>
+
+        <label for="MCH">MCH:</label>
+        <input type="text" name="MCH" required>
+
+        <label for="MCHC">MCHC:</label>
+        <input type="text" name="MCHC" required>
+
+        <label for="MCV">MCV:</label>
+        <input type="text" name="MCV" required>
+
+        <input type="submit" value="Predict">
+    </form>
 </body>
 </html>
+
